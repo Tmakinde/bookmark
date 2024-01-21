@@ -1,0 +1,15 @@
+#!/bin/bash
+set -e
+
+# THIS FILE CONTAINS METHOD TO SET THE CONFIG VALUES FOR THIS PACKAGE
+# IT ALLOWS THE LIBRARY TO LOAD CONFIG VALUES USING jq PACKAGE
+# FOLLOW https://developer.zendesk.com/documentation/integration-services/developer-guide/jq-cheat-sheet/ TO UNDERSTAND HOW TO USE jq
+
+config_file="config.json"
+
+# ARGUMENT 1 IS THE KEY WHICH IS TO BE OBTAINED FROM THE CONFIG FILE.
+get_config() {
+    jq -r $1 $config_file
+}
+
+# get_config '.browsers'
