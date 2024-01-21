@@ -1,0 +1,18 @@
+{
+    "output_format": [
+        "--json", "--table"
+    ],
+    "browsers": [
+        "Chrome"
+    ],
+    "bookmark_directory": "bookmarks-storage",
+    "os": {
+        "Linux": {
+            "Chrome": ".config/google-chrome/Default/Bookmarks",
+            "FireFox": "" 
+        },
+        "Darwin": {
+            "Chrome": "library/Application Support/google/chrome/Default/Bookmarks"
+        }
+    }
+}
